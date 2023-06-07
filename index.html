@@ -9,52 +9,87 @@
 
         <nav>
             <ul>
-                <li>ABOUT</li>
-                <li>PROJECTS</li>
-                <li>CONTACT</li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+
         <h2>Ben Ikeler</h2>
 
-        <div class="col-con">
+        <!-------------------
+            ABOUT SECTION
+        -------------------->
+        <section class="col-con" id="about">
             <div class="column">
                 <div class="about">
                     <h2>About</h2>
+                    <p>I love software development! I have some experience as a professional artist but I found my try medium to be code. </p>
                     <p>I am a graduate of The Tech Academy&apos;s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.</p>
-                    <div class="gh-btn">
-                        <img src="./images/github-mark-white.png" alt="GitHub Icon">
-                        <form action="https://github.com/jbikeler">
-                            <input type="submit" value="GitHub" />
-                        </form>
-                    </div>
+                    <p>I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!</p>
                 </div>
             </div>
             <div class="column">
                 <img src="./images/temp-avatar.png" alt="avatar">
             </div>
-        </div>
+        </section>
 
-        <div class="projects">
-            <h2>Projects</h2>
-        </div>
+        <!-------------------
+            PROJECTS SECTION
+        -------------------->
 
-        <div class="contact">
-            <form
-                action="https://formspree.io/f/mzbqlvra"
-                method="POST"
-                >
-                <label>
-                    Your email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Your message:
-                    <textarea name="message"></textarea>
-                </label>
-                <!-- your other form fields go here -->
-                <button type="submit">Send</button>
-            </form>
-        </div>
+        <section class="col-con" id="projects">
+            <div class="column">
+                <img src="./images/projs-pic.png" alt="avatar">
+            </div>
+            <div class="column">
+                <div class="projects">
+                    <h2>Projects</h2>
+                    <p> Feel free to check out any of my projects on GitHub!</p>
+                </div>
+                <div class="gh-btn">
+                    <img src="./images/github-mark-white.png" alt="GitHub Icon">
+                    <a href="https://github.com/jbikeler" target="_blank">GitHub</a> <!--GitHub Link-->
+                </div>
+            </div>
+
+        </section>
+
+        <!-------------------
+            CONTACT SECTION
+        -------------------->
+
+        <section id="contact" class="contact">
+            <h2> Contact</h2>
+            <div class="form-card">
+                <form
+                    action="https://formspree.io/f/mzbqlvra"
+                    method="POST"
+                    >
+                    <label>
+                        EMAIL
+                        <input type="email" name="email">
+                    </label>
+                    <label>
+                        MESSAGE
+                        <textarea name="message"></textarea>
+                    </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </section>
+
+        <!-------------------
+            FOOTER SECTION
+        -------------------->
+
+        <footer>
+            <p>
+                </p><p class="center">© Ben Ikeler.com</p>
+                <br>
+            <p></p>
+        </footer>
 
 	</body>
 </html>

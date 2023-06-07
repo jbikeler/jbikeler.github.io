@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url("../images/cristofer-maximilian-falls.jpg");
+    background-image: url("../images/cristofer-maximilian-falls.png");
     background-size:cover ;
 }
 
@@ -14,15 +14,19 @@ ul {
     flex-wrap: nowrap;
     margin: 0;
     background-color: rgba(255, 255, 255, 0.582);
+    list-style: none;
 }
 
 nav li {
+    padding: 15px;
+}
+
+nav a {
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-    list-style: none;
     color: white;
     font-size: 16px;
+    text-decoration: none;
 }
 
 nav li:hover {
@@ -41,6 +45,7 @@ nav li:hover {
 .column {
     width: 50%;
     margin: auto;
+    padding: 0px 45px;
 }
 
 .about {
@@ -52,27 +57,60 @@ nav li:hover {
     padding-bottom: 5px;
 }
 
+.about a {
+    color: white;
+    text-decoration: underline;
+}
+
 .about p {
     color: white;
 }
 
 .projects {
-    display: none;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.contact input {
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-width: calc(var(--border-width) * 1px);
-  border-style: solid;
-  border-color: var(--accent);
-  border-radius: calc(var(--border-radius) * 1px);
-  text-align: center;
-  outline: transparent;
-  width: 30%;
-  transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+#contact {
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+#contact input, textarea {
+    margin: 8px 0px;
+    color: white;
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, 0.11);
+    border: none;
+    border-radius: 5px;
+}
+
+#contact button {
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#contact button:hover {
+    background-color: rgb(153, 65, 235);
+}
+
+.form-card {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.575);
+    width: min-content;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .gh-btn {
@@ -94,12 +132,25 @@ nav li:hover {
     height: auto;
 }
 
-.gh-btn input {
+.gh-btn a {
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: white;
-    outline: none;
-    background: none;
-    border: none;
-    appearance: none;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
