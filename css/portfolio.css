@@ -149,6 +149,17 @@ ul {
     justify-content: center;
 }
 
+.rotate-fx-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate-fx {
+    perspective: 100px;
+    transform-style: preserve-3d;
+}
+
 #projects {
     background-color: aquamarine;
 }
