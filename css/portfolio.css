@@ -1,12 +1,10 @@
-body {
-    margin: 0;
-    background-image: url("../images/cristofer-maximilian-falls.png");
-    background-size:cover ;
+html {
+    scroll-behavior: smooth;
 }
 
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+
+body {
+    margin: 0;
 }
 
 ul {
@@ -17,29 +15,67 @@ ul {
     list-style: none;
 }
 
-nav li {
+#myNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#myNav li {
     padding: 15px;
 }
 
-nav a {
+.nav-link {
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 16px;
     text-decoration: none;
+    padding-top: 10px;
 }
 
-nav li:hover {
+/* #contact-link {
+    margin: 8px 5px 8px auto;
+    background-color: rgba(255, 255, 255, 0.342);
+    border: 2px solid rgba(127, 255, 212, 0.809);
+} */
+
+#myNav li:hover {
     background-color: rgba(255, 255, 255, 0.87);
-    color: black;
+}
+
+#myNav li:hover .nav-link {
+    color: rgb(93, 205, 168);
+}
+
+
+#side-nav {
+    color: white; /* placehoder */ 
+    position: fixed;
+    top: 45%;
+    left: 20px;
+}
+
+#init-sugar {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#init-sugar > p {
+    transition: color 0.5s ease;
+}
+
+#init-sugar > p:hover {
+    color: aquamarine;
 }
 
 .col-con {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     text-align: center;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.199);
 }
 
 .column {
@@ -48,7 +84,34 @@ nav li:hover {
     padding: 0px 45px;
 }
 
-.about {
+.section-title {
+    font-size: 75px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+#welcome {
+    background-color: blueviolet;
+    text-align: center;
+}
+
+#welcome p {
+    font-size: 120px;
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+#about {
+    background-color: rgb(18, 22, 33);
+    color: white;
+}
+
+.about-text {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 5px;
@@ -57,60 +120,91 @@ nav li:hover {
     padding-bottom: 5px;
 }
 
-.about a {
-    color: white;
+.about-text a {
     text-decoration: underline;
-}
-
-.about p {
     color: white;
 }
 
-.projects {
+.about-text p {
     color: white;
+}
+
+.pill {
+    background-color: rgba(148, 45, 245, 0.303);
+    border-radius: 25px;
+    width: min-content;
+    margin: 0 5px;
+}
+
+.pill > p {
+    color: rgb(193, 128, 255);
+    padding: 3px 10px ;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pill-container {
+    display: flex;
+    justify-content: center;
+}
+
+#projects {
+    background-color: aquamarine;
+}
+
+.projects-text {
+    color: rgb(18, 22, 33);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 #contact {
+    background-color: rgb(18, 22, 33);
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+    min-height: 100vh;
     font-weight: 600;
-}
-
-#contact input, textarea {
-    margin: 8px 0px;
-    color: white;
-    padding: 12px 20px;
-    background-color: rgba(0, 0, 0, 0.11);
-    border: none;
-    border-radius: 5px;
-}
-
-#contact button {
-    border: none;
-    background-color: blueviolet;
-    color: white;
-    padding: 7px;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-#contact button:hover {
-    background-color: rgb(153, 65, 235);
 }
 
 .form-card {
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.575);
-    width: min-content;
     padding: 15px;
     border-radius: 15px;
+}
+
+.form-card textarea {
+    height: 90px;
+}
+
+.form-card input, textarea {
+    margin: 8px 0px;
+    color: white;
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, 0.11);
+    border: 1px solid rgba(127, 255, 212, 0.213);
+    border-radius: 5px;
+    width: 80%;
+}
+
+.form-card button {
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 17px;
+    width: 10%;
+    height: 35px;
+}
+
+.form-card button:hover {
+    background-color: rgb(153, 65, 235);
 }
 
 .gh-btn {
@@ -143,14 +237,24 @@ nav li:hover {
     text-decoration: none;
 }
 
-footer {
-    margin-top: 40px;
-    color: white;
+#my-footer {
+    background-color: aquamarine;
     text-align: center;
     text-decoration: none;
+    height: 50px;
+    margin: 0;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
+#my-footer > p {
+    margin: auto;
+    padding-top: 15px;
+    color: rgb(18, 22, 33);
+}
+
+.swell {
+    transition: transform 0.2s;
+}
+
+.swell:hover {
+    transform: scale(1.05);
 }

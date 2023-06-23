@@ -7,32 +7,82 @@
 	</head>
 	<body>
 
-        <nav>
+        <!-------------------
+            TOP NAV SECTION
+        -------------------->
+
+        <nav id="myNav">
             <ul>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a class="nav-link" href="#about">ABOUT</a></li>
+                <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+                <li id="contact-link"><a class="nav-link" href="#contact">CONTACT</a></li>
             </ul>
         </nav>
 
-        <h2>Ben Ikeler</h2>
+
+        <!-------------------
+            SIDE NAV SECTION
+        -------------------->
+
+        <!-- temp placholder for page indicators -->
+        <div id="side-nav">
+            <p>o</p>
+            <p>o</p>
+            <p>o</p>
+            <p>o</p>
+        </div>
+
+        <!-------------------
+            WELCOME SECTION
+        -------------------->
+
+        <section class="col-con" id="welcome">
+            <div id="init-sugar">
+                <p>/</p>
+                <p>/</p>
+                <p>&ThinSpace;</p>
+                <p>w</p>
+                <p>e</p>
+                <p>l</p>
+                <p>c</p>
+                <p>o</p>
+                <p>m</p>
+                <p>e</p>
+            </div>
+        </section>
 
         <!-------------------
             ABOUT SECTION
         -------------------->
-        <section class="col-con" id="about">
+        <section onscroll="" class="col-con" id="about">
             <div class="column">
-                <div class="about">
-                    <h2>About</h2>
+                <div class="about-text">
+                    <p class="section-title">About</p>
                     <p>I love software development! I have some experience as a professional artist but I found my try medium to be code. </p>
                     <p>I am a graduate of The Tech Academy&apos;s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.</p>
                     <p>I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!</p>
                 </div>
+                <div class="pill-container">
+                    <div class="pill" >
+                        <p>HTML</p>
+                    </div>
+                    <div class="pill" >
+                        <p>CSS</p>
+                    </div>
+                    <div class="pill" >
+                        <p>JS</p>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <img src="./images/temp-avatar.png" alt="avatar">
+                <img class="swell" src="./images/Me_Sprite_300.png" alt="avatar">
             </div>
         </section>
+
+        
+
+        
+
 
         <!-------------------
             PROJECTS SECTION
@@ -40,12 +90,12 @@
 
         <section class="col-con" id="projects">
             <div class="column">
-                <img src="./images/projs-pic.png" alt="avatar">
+                <img class="swell" src="./images/projs-pic.png" alt="avatar">
             </div>
             <div class="column">
-                <div class="projects">
-                    <h2>Projects</h2>
-                    <p> Feel free to check out any of my projects on GitHub!</p>
+                <div class="projects-text">
+                    <p class="section-title">Projects</p>
+                    <p>Feel free to check out any of my projects on GitHub!</p>
                 </div>
                 <div class="gh-btn">
                     <img src="./images/github-mark-white.png" alt="GitHub Icon">
@@ -59,24 +109,26 @@
             CONTACT SECTION
         -------------------->
 
-        <section id="contact" class="contact">
-            <h2> Contact</h2>
-            <div class="form-card">
-                <form
-                    action="https://formspree.io/f/mzbqlvra"
-                    method="POST"
-                    >
-                    <label>
-                        EMAIL
-                        <input type="email" name="email">
-                    </label>
-                    <label>
-                        MESSAGE
-                        <textarea name="message"></textarea>
-                    </label>
-                    <!-- your other form fields go here -->
-                    <button type="submit">SEND</button>
-                </form>
+        <section id="contact" class="contact col-con">
+            <div class="column">
+                <p class="section-title">Contact</p>
+            </div>
+            <div class="column">
+                <div class="form-card">
+                    <form
+                        action="https://formspree.io/f/mzbqlvra"
+                        method="POST"
+                        >
+                        <label>NAME</label> <br>
+                        <input type="text" name="name"> <br>
+                        <label>EMAIL</label> <br>
+                        <input type="email" name="email"> <br>
+                        <label>MESSAGE</label> <br>
+                        <textarea name="message"></textarea> <br>
+                        <!-- your other form fields go here -->
+                        <button onclick="" type="submit">SEND</button>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -84,12 +136,9 @@
             FOOTER SECTION
         -------------------->
 
-        <footer>
-            <p>
-                </p><p class="center">© Ben Ikeler.com</p>
-                <br>
-            <p></p>
-        </footer>
+        <div id="my-footer">
+            <p>© Ben Ikeler.com</p>
+        </div>
 
 	</body>
 </html>
