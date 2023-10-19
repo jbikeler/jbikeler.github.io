@@ -250,6 +250,7 @@ ul {
 }
 
 #my-footer {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: aquamarine;
     text-align: center;
     text-decoration: none;
@@ -269,4 +270,20 @@ ul {
 
 .swell:hover {
     transform: scale(1.05);
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin img {
+    transform: scale(0.8);
+}
+
+.linkedin a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
 }
