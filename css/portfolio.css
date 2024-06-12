@@ -2,56 +2,142 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
+    font-family:  'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 ul {
     display: flex;
     flex-wrap: nowrap;
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.582);
+    background-color: rgb(18, 22, 33);
     list-style: none;
 }
 
+/* Dropdown menu styles */
 #myNav {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: rgb(18, 22, 33); /* Ensure background color */
+    z-index: 1000; /* High z-index to stay on top of other content */
+}
+
+#myNav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 #myNav li {
+    position: relative;
     padding: 15px;
 }
 
-.nav-link {
+#myNav a {
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(93, 205, 168);
     font-size: 16px;
     text-decoration: none;
     padding-top: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.143);
 }
 
-/* #contact-link {
-    margin: 8px 5px 8px auto;
-    background-color: rgba(255, 255, 255, 0.342);
-    border: 2px solid rgba(127, 255, 212, 0.809);
-} */
+#myNav li:hover {
+    background-color: rgba(93, 205, 168, 0.231);
+}
+
+#myNav li:hover a {
+    color: rgb(109, 237, 194);
+}
+
+/* Dropdown menu styles */
+#myNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(18, 22, 33); /* Ensure background color */
+    z-index: 1000; /* High z-index to stay on top of other content */
+}
+
+#myNav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#myNav li {
+    position: relative;
+    padding: 15px;
+}
+
+#myNav a {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(93, 205, 168);
+    font-size: 16px;
+    text-decoration: none;
+    padding-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.143);
+    display: block;
+}
 
 #myNav li:hover {
-    background-color: rgba(255, 255, 255, 0.87);
+    background-color: rgba(93, 205, 168, 0.231);
 }
 
-#myNav li:hover .nav-link {
-    color: rgb(93, 205, 168);
+#myNav li:hover a {
+    color: rgb(109, 237, 194);
 }
 
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; /* Align with the parent .dropdown */
+    background-color: rgb(18, 22, 33);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Add transition for fade in/out */
+}
+
+.dropdown-content li {
+    padding: 0; /* Remove default padding */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(93, 205, 168, 0.231);
+}
+
+/* Show dropdown on hover with a fade effect */
+.dropdown:hover .dropdown-content {
+    display: flex;
+    opacity: 1; /* Ensure the dropdown is displayed and opacity is set to 1 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 #side-nav {
-    color: white; /* placehoder */ 
+    color: white; /* placeholder */ 
     position: fixed;
     top: 45%;
     left: 20px;
@@ -71,12 +157,14 @@ ul {
     color: aquamarine;
 }
 
+
 .col-con {
     width: 100%;
     min-height: 100vh;
     display: flex;
     text-align: center;
     margin: auto;
+    justify-content: center;
 }
 
 .column {
@@ -99,8 +187,8 @@ ul {
 
 #welcome p {
     font-size: 120px;
-    font-weight:700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -114,7 +202,7 @@ ul {
 
 .about-text {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     padding-top: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -139,8 +227,8 @@ ul {
 
 .pill > p {
     color: rgb(193, 128, 255);
-    padding: 3px 10px ;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 10px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 600;
     margin: 0;
 }
@@ -163,17 +251,18 @@ ul {
 
 #projects {
     background-color: aquamarine;
+    position: relative;
 }
 
 .projects-text {
     color: rgb(18, 22, 33);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
 
 #contact {
     background-color: rgb(18, 22, 33);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
     width: 100%;
@@ -183,7 +272,7 @@ ul {
 
 .form-card {
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: auto;
     padding: 15px;
     border-radius: 15px;
@@ -224,10 +313,12 @@ ul {
     margin: auto;
     text-align: center;
     display: flex;
+    align-items: center;
     padding: 15px;
     background-color: blueviolet;
     border-radius: 10px;
     width: min-content;
+    white-space: nowrap;
 }
 
 .gh-btn:hover {
@@ -244,14 +335,15 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: white;
     text-decoration: none;
 }
 
 #my-footer {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
     background-color: aquamarine;
     text-align: center;
     text-decoration: none;
@@ -267,6 +359,10 @@ ul {
 
 .swell {
     transition: transform 0.2s;
+    max-width: 512px;
+    max-height: 512px;
+    width: auto;
+    height: auto;
 }
 
 .swell:hover {
@@ -287,4 +383,46 @@ ul {
     color: white;
     text-decoration: none;
     text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    border-radius: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px 10px 30px 10px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.project-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-slide {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-slide:not(.active) {
+    display: none;
 }
