@@ -33,7 +33,6 @@ ul {
 
 #myNav li {
     position: relative;
-    padding: 15px;
 }
 
 #myNav a {
@@ -42,46 +41,7 @@ ul {
     color: rgb(93, 205, 168);
     font-size: 16px;
     text-decoration: none;
-    padding-top: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.143);
-}
-
-#myNav li:hover {
-    background-color: rgba(93, 205, 168, 0.231);
-}
-
-#myNav li:hover a {
-    color: rgb(109, 237, 194);
-}
-
-/* Dropdown menu styles */
-#myNav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgb(18, 22, 33); /* Ensure background color */
-    z-index: 1000; /* High z-index to stay on top of other content */
-}
-
-#myNav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#myNav li {
-    position: relative;
-    padding: 15px;
-}
-
-#myNav a {
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(93, 205, 168);
-    font-size: 16px;
-    text-decoration: none;
-    padding-top: 10px;
+    padding: 15px; /* Add padding here */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.143);
     display: block;
 }
@@ -90,7 +50,7 @@ ul {
     background-color: rgba(93, 205, 168, 0.231);
 }
 
-#myNav li:hover a {
+#myNav li:hover > a {
     color: rgb(109, 237, 194);
 }
 
@@ -115,7 +75,7 @@ ul {
 
 .dropdown-content a {
     color: white;
-    padding: 12px 16px;
+    padding: 12px 16px; /* Padding for the link */
     text-decoration: none;
     display: block;
     text-align: left;
@@ -123,6 +83,7 @@ ul {
 
 .dropdown-content a:hover {
     background-color: rgba(93, 205, 168, 0.231);
+    color: rgb(109, 237, 194); /* Ensure text color change on hover */
 }
 
 /* Show dropdown on hover with a fade effect */
@@ -157,6 +118,11 @@ ul {
     color: aquamarine;
 }
 
+.width-fix {
+    max-width: 90rem;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .col-con {
     width: 100%;
@@ -167,17 +133,47 @@ ul {
     justify-content: center;
 }
 
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
 .column {
-    width: 50%;
+    width: 100%; /* Full width on smaller screens */
     margin: auto;
-    padding: 0px 45px;
+    padding: 0px 15px; /* Adjusted for smaller screens */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Keep columns side by side on larger screens */
+@media (min-width: 768px) {
+    .column {
+        width: 48%;
+        margin: 1%; /* Add some margin between the columns */
+    }
+}
+
+/* Ensure about section looks good on larger screens */
+@media (min-width: 1024px) {
+    .column {
+        width: 48%;
+        margin: 1%; /* Add some margin between the columns */
+    }
 }
 
 .section-title {
-    font-size: 75px;
+    font-size: clamp(70px, 4vw, 32px); /* Adjust min and max sizes as needed */
     font-weight: 900;
     text-transform: uppercase;
     margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #welcome {
@@ -258,6 +254,11 @@ ul {
     color: rgb(18, 22, 33);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #contact {
@@ -274,8 +275,9 @@ ul {
     text-align: left;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: auto;
-    padding: 15px;
+    padding: 0px;
     border-radius: 15px;
+    min-width: 330px;
 }
 
 .form-card textarea {
@@ -310,10 +312,11 @@ ul {
 }
 
 .gh-btn {
-    margin: auto;
+    margin: 0px auto;
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 15px;
     background-color: blueviolet;
     border-radius: 10px;

@@ -6,6 +6,13 @@
     z-index: 1;
 }
 
+.top-section {
+    background-image: url("../images/TallyWho_BG.png");
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
 .proj-bg-img {
     position: absolute;
     top: 0;
@@ -28,7 +35,7 @@
 .project-intro {
     padding-top: 100px;
     width: 100%;
-    min-height: 100vh;
+    padding-bottom: 1px;
 }
 .intro-img {
     margin-bottom: 30px;
@@ -57,7 +64,7 @@
     font-weight: 700;
 }
 
-.design-img-con {
+.mobile-img-con {
     display: flex;
     justify-content: center;
     margin-top: 50px;
