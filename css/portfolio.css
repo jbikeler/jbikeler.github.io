@@ -408,15 +408,15 @@ ul {
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 30px 10px 30px 10px;
+    background-color: blueviolet;
+    padding: 30px 12px 30px 12px;
     color: white;
     cursor: pointer;
     z-index: 10;
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgb(153, 65, 235);
 }
 
 .left-arrow {
