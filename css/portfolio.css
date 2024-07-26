@@ -128,7 +128,7 @@ ul {
 }
 
 .width-fix {
-    max-width: 90rem;
+    max-width: 70rem;
     margin-right: auto;
     margin-left: auto;
 }
@@ -146,7 +146,8 @@ ul {
 .two-columns {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .column {
@@ -161,19 +162,75 @@ ul {
     text-align: center;
 }
 
-/* Keep columns side by side on larger screens */
-@media (min-width: 768px) {
+/* Stack columns on top of each other on smaller screens */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
     .column {
-        width: 48%;
-        margin: 1%; /* Add some margin between the columns */
+        width: 100%;
+    }
+
+    .rotate-fx {
+        max-width: 100%;
     }
 }
 
-/* Ensure about section looks good on larger screens */
-@media (min-width: 1024px) {
+/* Keep columns side by side on larger screens */
+@media (min-width: 769px) {
+    .two-columns {
+        flex-direction: row;
+    }
+    
     .column {
-        width: 48%;
-        margin: 1%; /* Add some margin between the columns */
+        flex: 1 1 50%; /* Allow columns to grow and shrink */
+        max-width: calc(50% - 30px); /* Ensure columns don't shrink too much */
+        margin: 0; /* Remove margins to prevent overflow */
+    }
+
+
+}
+
+/* Adjust text containers to prevent cut-off */
+.about-content, .projects-text {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* New content-wrapper class */
+.content-wrapper {
+    margin: 0 auto; /* Center the text containers */
+    max-width: 100%; /* Ensure the containers don't get too wide */
+    width: 100%; /* Set to 100% for better alignment */
+    box-sizing: border-box;
+    padding: 0 10px; /* Add some padding */
+}
+
+@media (max-width: 1300px) {
+    .content-wrapper {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1170px) {
+    .content-wrapper {
+        max-width: 85%;
+    }
+    #about-sect-title {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        max-width: 70%;
+        padding: 0 5px;
+    }
+    #about-sect-title {
+        padding-top: 30px;
     }
 }
 
@@ -193,7 +250,7 @@ ul {
 }
 
 #welcome p {
-    font-size: 120px;
+    font-size: clamp(60px, 10vw, 120px);
     font-weight: 700;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
@@ -208,21 +265,19 @@ ul {
     width: 100%;
 }
 
-.about-text {
+.about-content {
     text-align: center;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     padding-top: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 5px;
 }
 
-.about-text a {
+.about-content a {
     text-decoration: underline;
     color: white;
 }
 
-.about-text p {
+.about-content p {
     color: white;
 }
 
@@ -230,7 +285,8 @@ ul {
     background-color: rgba(148, 45, 245, 0.303);
     border-radius: 25px;
     width: min-content;
-    margin: 0 5px;
+    margin: 0;
+    flex-shrink: 1; /* Allow pills to shrink */
 }
 
 .pill > p {
@@ -244,6 +300,19 @@ ul {
 .pill-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box; /* Include padding in the total width */
+    padding: 10px 20px; /* Add padding inside the container */
+}
+
+.pill-row {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap; /* Allow pills to wrap in the row */
+    box-sizing: border-box; /* Include padding in the total width */
+    padding: 0 10px; /* Adjust padding as needed */
+    gap: 10px; /* Adjust the gap between pills */
 }
 
 .rotate-fx-con {
@@ -272,6 +341,9 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 10px; /* Added */
+    width: 100%; /* Added */
+    box-sizing: border-box; /* Added */
 }
 
 #contact {
@@ -432,6 +504,7 @@ ul {
     width: 100%;
     overflow: hidden;
     position: relative;
+    flex-direction: column; /* Added */
 }
 
 .project-slide {
