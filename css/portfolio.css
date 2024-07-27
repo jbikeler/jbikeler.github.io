@@ -143,6 +143,7 @@ ul {
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+
 .two-columns {
     display: flex;
     justify-content: space-between;
@@ -174,6 +175,10 @@ ul {
     }
 
     .rotate-fx {
+        max-width: 100%;
+    }
+
+    .section-img {
         max-width: 100%;
     }
 }
@@ -209,9 +214,20 @@ ul {
     padding: 0 10px; /* Add some padding */
 }
 
+/* Responsive styles */
+/* You can set it to display in larger screens if needed */
+@media (min-width: 1301px) {
+    .project-title .section-title.extra-clamp.pt-space {
+        display: block;
+    }
+}
+
 @media (max-width: 1300px) {
     .content-wrapper {
         max-width: 90%;
+    }
+    .project-title .section-title.extra-clamp.pt-space {
+        display: none;
     }
 }
 
@@ -221,6 +237,9 @@ ul {
     }
     #about-sect-title {
         padding-top: 0px;
+    }
+    .project-title .section-title.extra-clamp.pt-space {
+        display: none;
     }
 }
 
@@ -232,6 +251,18 @@ ul {
     #about-sect-title {
         padding-top: 30px;
     }
+    .section-title {
+        text-wrap: wrap;
+    }
+    .project-title {
+        margin-top: 20px; /* fix for adding margin above title when in mobile layout */
+    }
+    .project-title .section-title.extra-clamp.pt-space {
+        display: none;
+    }
+    .minwidth-add-margin-bot{ /* fix for adding margin under image when in mobile layout */
+        margin-bottom: 20px;
+    }
 }
 
 .section-title {
@@ -241,6 +272,24 @@ ul {
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.section-title.extra-clamp {
+    margin: 0;
+    font-size: clamp(62px, 4vw, 32px); /* These titles need to shrink slightly more */
+}
+
+.project-title { /* Adjust the project title size differently in case the titles are long */
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Ensure the section-img image shrinks properly */
+.section-img img {
+    width: 100%; /* Initial width */
+    max-width: 512px; /* Maximum width */
+    height: auto;
 }
 
 #welcome {
@@ -346,6 +395,49 @@ ul {
     box-sizing: border-box; /* Added */
 }
 
+.project-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column; /* Added */
+}
+
+.project-slide {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-slide:not(.active) {
+    display: none;
+}
+
+.arrow {
+    position: absolute;
+    border-radius: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: blueviolet;
+    padding: 30px 12px 30px 12px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgb(153, 65, 235);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
 #contact {
     background-color: rgb(18, 22, 33);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -357,12 +449,18 @@ ul {
 }
 
 .form-card {
+    display: flex;
+    justify-content: center;
     text-align: left;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: auto;
     padding: 0px;
     border-radius: 15px;
     min-width: 330px;
+}
+
+.form-card form {
+    width: 100%;
 }
 
 .form-card textarea {
@@ -376,7 +474,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.11);
     border: 1px solid rgba(127, 255, 212, 0.213);
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
 }
 
 .form-card button {
@@ -429,6 +527,12 @@ ul {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .gh-btn {
+        margin-bottom: 20px;
+    }
+}
+
 #my-footer {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -472,47 +576,4 @@ ul {
     color: white;
     text-decoration: none;
     text-align: center;
-}
-
-.arrow {
-    position: absolute;
-    border-radius: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: blueviolet;
-    padding: 30px 12px 30px 12px;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.arrow:hover {
-    background-color: rgb(153, 65, 235);
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow {
-    right: 10px;
-}
-
-.project-container {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    flex-direction: column; /* Added */
-}
-
-.project-slide {
-    width: 100%;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.project-slide:not(.active) {
-    display: none;
 }

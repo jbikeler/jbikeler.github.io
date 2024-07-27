@@ -93,42 +93,50 @@
 
     <!-- PROJECTS SECTION -->
     <section class="col-con" id="projects">
-        <div class="width-fix two-columns">
+        <div class="width-fix">
             <div class="arrow left-arrow" id="left-arrow">&#8249;</div>
             <div class="project-container" id="project-container">
                 <!-- START Projects -->
                 <div class="project-slide active">
-                    <div class="column">
-                        <img class="swell" src="./images/projs-pic_dark.png" alt="Project 1 Image">
-                    </div>
-                    <div class="column">
-                        <div class="projects-text content-wrapper">
-                            <p class="section-title">Projects</p>
-                            <p>>>> Check out some of my projects >>></p>
-                            <p>If you want to see some of my open projects here's my GitHub!</p>
+                    <div class="col-con two-columns">
+                        <div class="column section-img">
+                            <img class="swell" src="./images/projs-pic_dark.png" alt="Project 1 Image">
                         </div>
-                        <div class="gh-btn">
-                            <img src="./images/github-mark-white.png" alt="GitHub Icon">
-                            <a href="https://github.com/jbikeler" target="_blank">GitHub</a>
+                        <div class="column">
+                            <div class="projects-text content-wrapper">
+                                <p class="section-title extra-clamp">Projects</p>
+                                <p>Hit the arrow to check out some of my projects.</p>
+                                <p>If you want to see some of my open projects here's my GitHub!</p>
+                            </div>
+                            <div class="gh-btn">
+                                <img src="./images/github-mark-white.png" alt="GitHub Icon">
+                                <a href="https://github.com/jbikeler" target="_blank">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- TALLYWHO -->
                 <div class="project-slide">
-                    <div class="column">
-                        <div class="projects-text">
-                            <p class="section-title">Tally Who?</p>
-                            <p>A score keeping app. Like boardgames? This might interest you.</p>
-                            <p>It will soon be available for purchase on your app store!</p>
+                    <div class="col-con two-columns">
+                        <div class="column">
+                            <div class="projects-text content-wrapper">
+                                <div class="project-title">
+                                    <p class="section-title extra-clamp">Tally</p>
+                                    <p class="section-title extra-clamp pt-space">&ThickSpace;</p> <!-- Ensure this has pt-space class -->
+                                    <p class="section-title extra-clamp">Who?</p>
+                                </div>
+                                <p>A score-keeping app. Like board games? This might interest you.</p>
+                                <p>It will soon be available for purchase on your app store!</p>
+                            </div>
+                            <div class="gh-btn">
+                                <a href="project_tallywho.html" target="_blank">View Project</a>
+                            </div>
                         </div>
-                        <div class="gh-btn">
-                            <a href="project_tallywho.html" target="_blank">View Project</a>
+                        <div class="column minwidth-add-margin-bot">
+                            <a href="project_tallywho.html">
+                                <img class="swell" src="./images/PhoneScreen_Mockup.png" alt="TallyWho Mockup">
+                            </a>
                         </div>
-                    </div>
-                    <div class="column">
-                        <a href="project_tallywho.html">
-                            <img class="swell" src="./images/PhoneScreen_Mockup.png" alt="TallyWho Mockup">
-                        </a>
                     </div>
                 </div>
                 <!-- END Projects -->
@@ -139,26 +147,28 @@
     <!-- END PROJECTS SECTION -->
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="contact col-con">
+    <section id="contact" class="contact">
         <div class="width-fix two-columns">
-            <div class="column">
-                <p class="section-title">Contact</p>
-                <div class="linkedin">
-                    <img class="" src="./images/linkedin-48.png" alt="linkedin logo">
-                    <a href="https://www.linkedin.com/in/benikeler/" target="_blank">Ben on LinkedIn</a>
+            <div class="col-con">
+                <div class="column">
+                    <p class="section-title">Contact</p>
+                    <div class="linkedin">
+                        <img class="" src="./images/linkedin-48.png" alt="linkedin logo">
+                        <a href="https://www.linkedin.com/in/benikeler/" target="_blank">Ben on LinkedIn</a>
+                    </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="form-card">
-                    <form action="https://formspree.io/f/mzbqlvra" method="POST">
-                        <label>NAME</label> <br>
-                        <input type="text" name="name" required> <br>
-                        <label>EMAIL</label> <br>
-                        <input type="email" name="email" required> <br>
-                        <label>MESSAGE</label> <br>
-                        <textarea name="message" required></textarea> <br>
-                        <button onclick="" type="submit">SEND</button>
-                    </form>
+                <div class="column">
+                    <div class="form-card">
+                        <form action="https://formspree.io/f/mzbqlvra" method="POST">
+                            <label>NAME</label> <br>
+                            <input type="text" name="name" required> <br>
+                            <label>EMAIL</label> <br>
+                            <input type="email" name="email" required> <br>
+                            <label>MESSAGE</label> <br>
+                            <textarea name="message" required></textarea> <br>
+                            <button onclick="" type="submit">SEND</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
