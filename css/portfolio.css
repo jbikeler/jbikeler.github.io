@@ -113,19 +113,7 @@ ul {
     left: 20px;
 }
 
-#init-sugar {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
 
-#init-sugar > p {
-    transition: color 0.5s ease;
-}
-
-#init-sugar > p:hover {
-    color: aquamarine;
-}
 
 .width-fix {
     max-width: 70rem;
@@ -299,13 +287,77 @@ ul {
 }
 
 #welcome p {
-    font-size: clamp(60px, 10vw, 120px);
     font-weight: 700;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     text-transform: uppercase;
-    text-align: center;
+}
+
+/* If the layout doesn't look good with the dynamic horizontal welcome
+and the vertical welcome i can cut everything
+Ends go back to adjusting the horizontal welcome to just have a clamp.
+I thought I couldn't control this before but there was a clamp inside of
+the 'welcome p' class That was overriding it so it should work now.*/
+
+.horizontal-welcome {
+    font-size: clamp(60px, 10vw, 120px);
+    display: flex;
     margin: auto;
+    text-align: center;
+}
+
+.vertical-welcome {
+    font-size: clamp(80px, 15vw, 150px);
+    width: 100%;
+    height: auto;
+    display: none;
+    justify-content: center;
+    margin: auto;
+    text-align: justify;
+}
+
+.vert-group {
+    display: flex;
+    justify-content: center;
+}
+
+.vert-group > p {
+    margin: 0;
+}
+
+#init-sugar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#init-sugar > p {
+    transition: color 0.5s ease;
+    margin: 0; /* Remove any default margins that might cause spacing issues */
+}
+
+#init-sugar > p:hover {
+    color: aquamarine;
+}
+
+@media (max-width: 514px) { /* when the screen is mobile */
+    .horizontal-welcome {
+        display: none;
+    }
+    .vertical-welcome {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Keep columns side by side on larger screens */
+@media (min-width: 515px) { /* when the screen is desktop or tablet */
+    .vertical-welcome {
+        display: none;
+    }
+    .horizontal-welcome {
+        display: flex;
+    }
 }
 
 #about {
