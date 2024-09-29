@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ben Ikeler</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <script src="./js/portfolio.js" defer></script>
+</head>
+<body>
+    <!-- TOP NAV SECTION -->
+    <nav id="myNav">
+        <ul>
+            <li><a class="nav-link" href="index.html#about">ABOUT</a></li>
+            <li class="dropdown">
+                <a class="nav-link" href="index.html#projects">PROJECTS</a>
+                <ul class="dropdown-content">
+                    <li><a class="dropdown-link" href="project_tallywho.html">Tally Who?</a></li>
+                    <!-- Add more project links as needed -->
+                </ul>
+            </li>
+            <li><a class="nav-link" href="index.html#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- WELCOME SECTION -->
+    <section class="col-con" id="welcome">
+        <div id="init-sugar">
+            <div class="horizontal-welcome">
+                <p>/</p>
+                <p>/</p>
+                <p>&ThinSpace;</p>
+                <p>w</p>
+                <p>e</p>
+                <p>l</p>
+                <p>c</p>
+                <p>o</p>
+                <p>m</p>
+                <p>e</p>
+            </div>
+        </div>
+        <div class="vertical-welcome">
+            <div class="vert-group">
+                <p>/</p>
+                <p>/</p>
+                <p>&ThinSpace;</p>
+                <p>w</p>
+            </div>
+            <div class="vert-group">
+                <p>e</p>
+                <p>l</p>
+                <p>c</p>
+            </div>
+            <div class="vert-group">
+                <p>o</p>
+                <p>m</p>
+                <p>e</p>
+            </div>
+        </div>
+    </section>
+    <!-- END WELCOME SECTION -->
+
+    <!-- ABOUT SECTION -->
+    <section class="col-con" id="about">
+        <div class="width-fix two-columns">
+            <div class="column">
+                <div class="about-content">
+                    <p id="about-sect-title" class="section-title">About</p>
+                    <div class="about-info content-wrapper">
+                        <p>Hey, I'm Ben! I started my career as a professional artist and after learning how to be a developer, found a passion for creating with code.</p>
+                        <p>I am a graduate of The Tech Academy's Software Developer Boot Camp, and I'm proficient in various programming languages such as: HTML, CSS, JavaScript, SQL, C# and more. For more info on me, check out my <a href="https://drive.google.com/file/d/1N4mP8yWnsjIxQnvjwRB6u_33w38-xKrz/view?usp=share_link" target="_blank">resume</a> or jump over to my <a href="https://www.linkedin.com/in/benikeler/" target="_blank">LinkedIn page</a>.</p>
+                        <p>As a full-stack developer, I would love to work with you on your project. <a href="#contact">Contact</a> me below!</p>
+                    </div>
+                </div>
+                <div class="pill-container">
+                    <div class="pill-row">
+                        <div class="pill">
+                            <p>C#</p>
+                        </div>
+                        <div class="pill">
+                            <p>.NET</p>
+                        </div>
+                        <div class="pill">
+                            <p>Python</p>
+                        </div>
+                        <div class="pill">
+                            <p>HTML</p>
+                        </div>
+                        <div class="pill">
+                            <p>CSS</p>
+                        </div>
+                        <div class="pill">
+                            <p>JS</p>
+                        </div>
+                        <div class="pill">
+                            <p>SQL</p>
+                        </div>
+                        <div class="pill">
+                            <p>Flutter/Dart</p>
+                        </div>
+                        <div class="pill">
+                            <p>Azure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column rotate-fx-con">
+                <img class="rotate-fx" src="./images/Me_Sprite_300.png" alt="avatar">
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT SECTION -->
+
+    <!-- PROJECTS SECTION -->
+    <section class="col-con" id="projects">
+        <div class="width-fix">
+            <div class="arrow left-arrow" id="left-arrow">&#8249;</div>
+            <div class="project-container" id="project-container">
+                <!-- START Projects -->
+                <div class="project-slide active">
+                    <div class="col-con two-columns">
+                        <div class="column section-img">
+                            <img class="swell" src="./images/projs-pic_dark.png" alt="Project 1 Image">
+                        </div>
+                        <div class="column">
+                            <div class="projects-text content-wrapper">
+                                <p class="section-title extra-clamp">Projects</p>
+                                <p>Hit the arrow to check out some of my projects.</p>
+                                <p>If you want to see some of my open projects here's my GitHub!</p>
+                            </div>
+                            <div class="gh-btn">
+                                <img src="./images/github-mark-white.png" alt="GitHub Icon">
+                                <a href="https://github.com/jbikeler" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TALLYWHO -->
+                <div class="project-slide">
+                    <div class="col-con two-columns">
+                        <div class="column">
+                            <div class="projects-text content-wrapper">
+                                <div class="project-title">
+                                    <p class="section-title extra-clamp">Tally</p>
+                                    <p class="section-title extra-clamp pt-space">&ThickSpace;</p> <!-- Ensure this has pt-space class -->
+                                    <p class="section-title extra-clamp">Who?</p>
+                                </div>
+                                <p>A score-keeping app. Like board games? This might interest you.</p>
+                                <p>It will soon be available for purchase on your app store!</p>
+                            </div>
+                            <div class="gh-btn">
+                                <a href="project_tallywho.html" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                        <div class="column minwidth-add-margin-bot">
+                            <a href="project_tallywho.html">
+                                <img class="swell" src="./images/PhoneScreen_Mockup.png" alt="TallyWho Mockup">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Projects -->
+            </div>
+            <div class="arrow right-arrow" id="right-arrow">&#8250;</div>
+        </div>
+    </section>
+    <!-- END PROJECTS SECTION -->
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="width-fix">
+            <div class="col-con two-columns">
+                <div class="column">
+                    <p class="section-title">Contact</p>
+                    <div class="linkedin">
+                        <img class="" src="./images/linkedin-48.png" alt="linkedin logo">
+                        <a href="https://www.linkedin.com/in/benikeler/" target="_blank">Ben on LinkedIn</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-card">
+                        <form action="https://formspree.io/f/mzbqlvra" method="POST">
+                            <label>NAME</label> <br>
+                            <input type="text" name="name" required> <br>
+                            <label>EMAIL</label> <br>
+                            <input type="email" name="email" required> <br>
+                            <label>MESSAGE</label> <br>
+                            <textarea name="message" required></textarea> <br>
+                            <button onclick="" type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <div id="my-footer">
+        <p>© Ben Ikeler</p>
+    </div>
+</body>
+</html>
